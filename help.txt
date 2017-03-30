@@ -1,0 +1,54 @@
+PyGen is a tool to generate wordlists. It can be done in three ways:
+
+    1. Generation master
+    2. Generation with args
+    3. Generation by pattern
+
+-------- GENERATION MASTER --------
+
+Just follow instructions on the screen and all will be done correctly.
+The steps are:
+
+    1. Min and max length of words (can be the same for fixed length)
+    2. Charsets setup. You need to type in all needed charsets for each symbol. There
+       is option to define custom charset for each symbol (can be used for masking)
+    3. Path to final file (if you only type the file name without path, it will be saved to current directory)
+
+-------- GENERATION WITH ARGS --------
+
+You can do this in two ways:
+
+    1. Pass pattern and path to file
+    2. Pass pattern and -s or --silent flag and pipe output to file
+
+Examples:
+
+    python3 main.py '2/3.({az}{09}{AZ})' /root/example.txt
+    python3 main.py '2/3.({az}{09}{AZ})' -s > /root/example.txt
+    python3 main.py '2/3.({az}{09}{AZ})' --silent > /root/example.txt
+
+Extra example - sort and pipe:
+
+    python3 main.py '2/3.({az}{09}{AZ})' -s | sort > /root/example.txt
+
+-------- GENERATION BY PATTERN --------
+
+There are just two easy steps to do:
+
+    1. Enter pattern (pattern rules will be described below)
+    2. Enter path to final file (same as master generation)
+
+--- Pattern rules ---
+
+Here is an example pattern: 3/5.({az}{AZ|09}{09}{special}{09|[qwerty123]}) Let's take a closer look.
+
+3 and 5 separated by a slash are min and max lengths of words.
+After dot there are brackets with charsets in them.
+Each group of charsets is surrounded by curly brackets.
+If symbol should have more than one charsets, then they are separated by '|' symbol.
+Custom charsets are surrounded by block brackets.
+
+It's that simple!
+And always remember: NO SPACES IN PATTERN
+
+So this is all you need to know to use my tool. Good hacks!
