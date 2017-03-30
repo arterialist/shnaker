@@ -23,13 +23,13 @@ You can do this in two ways:
 
 Examples:
 
-    python3 main.py '2/3.({az}{09}{AZ})' /root/example.txt
-    python3 main.py '2/3.({az}{09}{AZ})' -s > /root/example.txt
-    python3 main.py '2/3.({az}{09}{AZ})' --silent > /root/example.txt
+    python3 shnaker.py '2/3.({az}{09}{AZ})' /root/example.txt
+    python3 shnaker.py '2/3.({az}{09}{AZ})' -s > /root/example.txt
+    python3 shnaker.py '2/3.({az}{09}{AZ})' --silent > /root/example.txt
 
 Extra example - sort and pipe:
 
-    python3 main.py '2/3.({az}{09}{AZ})' -s | sort > /root/example.txt
+    python3 shnaker.py '2/3.({az}{09}{AZ})' -s | sort > /root/example.txt
 
 -------- GENERATION BY PATTERN --------
 
