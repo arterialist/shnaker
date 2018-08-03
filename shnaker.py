@@ -12,13 +12,11 @@ last_message = ''
 
 
 def master_generation():
-    master = creators.WordlistMaster()
-    master.start()
+    creators.WordlistMaster().start()
 
 
 def pattern_generation():
-    master = creators.WordlistByPatternMaster()
-    master.start()
+    creators.WordlistByPatternMaster().start()
 
 
 def show_help():
